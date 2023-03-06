@@ -42,7 +42,7 @@ class Book {
 	Book& operator=(const Book& right);
 
 	//move operator
-	Book&& operator=(Book&& right);
+	Book& operator=(Book&& right);
 
 	//print operator
 	friend std::ostream& operator<<(std::ostream& out, const Book& book);
