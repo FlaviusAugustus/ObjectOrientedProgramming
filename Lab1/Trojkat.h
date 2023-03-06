@@ -8,6 +8,8 @@ class Trojkat : public FiguraPlaska {
 
 protected:
 
+	static int objectCount;
+
 	void Wypisz(std::ostream& out) const override;
 
 public:

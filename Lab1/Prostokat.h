@@ -11,6 +11,8 @@ private:
 
 protected:
 
+	static int objectCount;
+
 	void Wypisz(std::ostream& out) const override;
 
 public:

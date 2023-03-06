@@ -3,7 +3,14 @@
 
 using namespace std;
 
+int Trojkat::objectCount = 0;
+
 Trojkat::Trojkat(double a, double b, double c) : a(a), b(b), c(c) {
+
+	FiguraPlaska::objectCount++;
+	Trojkat::objectCount++;
+
+	cout << "FP: " << FiguraPlaska::objectCount << " T: " << Trojkat::objectCount << endl;
 
 	cout << "Konstruktor Trojkata(" << a << "," << b << "," << c << ")" << endl;
 

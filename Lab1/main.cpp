@@ -48,35 +48,43 @@ int main() {
 	//	TASK 3.1	TASK 3.2
 	FiguraPlaska* kolo = new Kolo(3);
 	FiguraPlaska* trojkat = new Trojkat(2, 2, 2);
-	FiguraPlaska* prostokat = new Prostokat(2, 2);
+	FiguraPlaska* prostokat1 = new Prostokat(2, 2);
+	FiguraPlaska* prostokat2 = new Prostokat(4, 4);
 
-	FiguraPlaska* tab[] = { kolo, trojkat, prostokat };
+	FiguraPlaska* tab[] = { kolo, trojkat, prostokat1, prostokat2 };
+
+	cout << endl;
 
 	for(FiguraPlaska* figura : tab ) {
 		
 		cout << figura->Obwod() << " ";
 		cout << figura->Pole() << '\n';
-	
+		
 	}
+
+	cout << endl;
 
 	//release allocated memory
 	delete kolo;
 	delete trojkat;
-	delete prostokat;
+	delete prostokat1;
+	delete prostokat2;
 
+	cout << endl;
 
 	//TASK 3.3
 
 	BasicCalc calcB;
 	AdvancedCalc calcA;
 
+	BasicCalc* calcPointer = &calcA;
+
 	//overloading
 	cout << calcA.substract(2, 5) << '\n';
 	cout << calcA.substract(5.5, 5.5) << '\n';
 
 	//overriding
-
-	cout << calcA.add(2, 2) << '\n';
+	cout << calcPointer->add(2.5, 2.5) << '\n';
 	cout << calcB.add(2, 2) << '\n';
 
 	return 0;

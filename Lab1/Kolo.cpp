@@ -3,8 +3,14 @@
 
 using namespace std;
 
+int Kolo::objectCount = 0;
+
 Kolo::Kolo(double r) : r(r) {
 
+	FiguraPlaska::objectCount++;
+	Kolo::objectCount++;
+
+	cout << "FP: " << FiguraPlaska::objectCount << " K: " << Kolo::objectCount << endl;
 	cout << "Konstruktor Kola(" << r << ")" << endl;
 
 }

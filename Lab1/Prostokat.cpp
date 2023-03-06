@@ -3,8 +3,14 @@
 
 using namespace std;
 
+int Prostokat::objectCount = 0;
 
 Prostokat::Prostokat(double a, double b) : a(a), b(b) {
+
+	Prostokat::objectCount++;
+	FiguraPlaska::objectCount++;
+
+	cout << "FP: " << FiguraPlaska::objectCount << " P: " << Prostokat::objectCount << endl;
 
 	cout << "Konstruktor Prostokata(" << a << "," << b << ")" << endl;
 
