@@ -9,6 +9,20 @@ Book::Book() {
 
 }
 
+Book::Book(std::string&& author, std::string&& title) {
+
+	this->author = author;
+	this->title = title;
+
+}
+
+Book::Book(const std::string& author, const std::string& title) {
+
+	this->author = author;
+	this->title = title;
+
+}
+
 //copy constructor
 Book::Book(const Book& other)
 	: author(other.author), title(other.title) {
@@ -55,3 +69,10 @@ Book& Book::operator=(Book&& other) {
 	return *this;
 }
 
+std::ostream& operator<<(std::ostream& out, const Book& book) {
+
+	out << "Title: " << book.title << " Author: " << book.author << std::endl;
+
+	return out;
+
+}
