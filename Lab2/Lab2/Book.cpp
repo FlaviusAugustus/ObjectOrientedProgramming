@@ -13,7 +13,7 @@ Book::Book() {
 }
 
 //copy constructor
-Book::Book(const Book& other) : author(other.author), title(other.title) {
+Book::Book(const Book& other): author(other.author), title(other.title) {
 
 	std::cout << "Book(const Book&)" << std::endl;
 
