@@ -8,6 +8,13 @@ Library::Library() {
 
 }
 
+Library::Library(std::size_t size) {
+
+	books = new Book[size];
+	this->size = size;
+
+}
+
 Library::Library(Library&& other) {
 
 	books = other.books;
@@ -69,10 +76,11 @@ Library& Library::operator=(Library&& other) {
 
 	delete[] books;
 
-	books = nullptr;
-	size = 0;
+	books = other.books;
+	size = other.size;
 
-	std::swap(books, other.books);
+	other.books = nullptr;
+	other.size = 0;
 
 	return *this;
 
