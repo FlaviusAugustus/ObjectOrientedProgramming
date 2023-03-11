@@ -33,7 +33,6 @@ class Book {
 	void setTitle(const std::string& title);
 
 	//r-value setters
-
 	void setAuthor(std::string&& author);
 
 	void setTitle(std::string&& title);
